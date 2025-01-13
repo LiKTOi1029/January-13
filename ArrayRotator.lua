@@ -11,12 +11,14 @@ function table.randomizer(tab)
 		local num4 = math.random(num3)
 		tKeys[num3],tKeys[num4] = tKeys[num4],tKeys[num3]
 	end
-	for num5 = 1, #tab, -1 do
-		table.insert(tNewLines, num5, tKeys)
+	for num5 = 1, #tab, 1 do
+		table.insert(tNewLines, num5, tab[tKeys[num5]])
 	end
+	for num6 = 1, #tNewLines, 1 do print(tNewLines[num6]) end
 	return tNewLines
 end
 
 for num0 in io.lines("output.txt") do
 	table.insert(tLines, num0)
 end
+list = table.randomizer(tLines)
