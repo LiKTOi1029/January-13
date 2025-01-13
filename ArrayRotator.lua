@@ -7,6 +7,10 @@ function table.randomizer(tab)
 	for num1, num2 in pairs(tab) do
 		table.insert(tKeys, num1)
 	end
+	for num3 = #tKeys, 2, -1 do
+		local num4 = math.random(num3)
+		tKeys[num3],tKeys[num4] = tKeys[num4],tKeys[num3]
+	end
 	return tNewLines
 end
 
