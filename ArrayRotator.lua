@@ -22,3 +22,7 @@ for num0 in io.lines("output.txt") do
 	table.insert(tLines, num0)
 end
 list = table.randomizer(tLines)
+output = io.open("output.txt", "w+")
+for num7 = 1, #list, 1 do
+	output:write(list[num7], "\n")
+end
