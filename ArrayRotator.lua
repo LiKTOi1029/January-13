@@ -11,6 +11,9 @@ function table.randomizer(tab)
 		local num4 = math.random(num3)
 		tKeys[num3],tKeys[num4] = tKeys[num4],tKeys[num3]
 	end
+	for num5 = 1, #tab, -1 do
+		table.insert(tNewLines, num5, tKeys)
+	end
 	return tNewLines
 end
 
