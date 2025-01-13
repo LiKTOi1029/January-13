@@ -1,7 +1,10 @@
 tLines = {}
-x = 0
+function table.randomizer(table)
+	local randomInt = math.random(#tLines)
+	return randomInt
+end
+
 for num0 in io.lines("output.txt") do
-	x=x+1
 	table.insert(tLines, num0)
-	print(tLines[x])
+	print(table.randomizer(tLines) .. " | " .. num0)
 end
